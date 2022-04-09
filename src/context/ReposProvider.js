@@ -7,6 +7,8 @@ function ReposProvider({ children }) {
 
   const [profile, setProfile] = useState({});
   const [repos, setRepos ] = useState([]);
+
+  console.log('Repos:', repos);
   
   // useEffect(async () => {
   //   const response = await fetch(URL+'iagomesquita')
