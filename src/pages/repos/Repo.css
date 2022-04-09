@@ -1,0 +1,36 @@
+.profile-container {
+  display: flex;
+  
+
+}
+
+.profile-container span {
+  font-size: 20px;
+  line-height: 1.25;
+  font-weight: bold;
+}
+
+.repos-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px ;
+  border: solid 1px red;
+}
+
+.repos-text {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.icon-container {
+  display: flex;
+  row-gap: 5px;
+  column-gap: 18px;
+}
+
+.icons {
+  display: flex;
+  column-gap: 10px;
+}
+

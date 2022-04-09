@@ -2,6 +2,8 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Helvetica Neue,Helvetica,Arial,sans-serif; 
+  
 }
 
 .container {
@@ -26,10 +28,31 @@ main {
   height: 92vh;
 }
 
-.search-users {
+/* .search-users {
   text-align: center;
   margin-top: 20px;
-  width: 300px;
+} */
+
+.input-container {
+  display: flex;
+  align-items: center;
   margin-left: auto;
-  margin-right: auto ;
+  margin-right: auto;
+  border: 1px solid rgb(222, 217, 217);
+  width: 250px;
+  height: 27px;
 }
+
+/* .input-container i {
+  color: aqua;
+} */
+
+.search-users {
+  border: none;
+  text-align: center;
+  
+}
+/* 
+.search-users:active {
+  border: none
+} */
