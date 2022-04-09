@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import MyContext from '../../context/MyContext';
 import forkImage from './images/gitfork_120084.png'
 
@@ -6,6 +6,10 @@ import './Repo.css';
 function Repos () {
 
   const { profile, repos } = useContext(MyContext)
+  const [ nameRepo, setNameRepo ] = useState('');
+
+  
+
   console.log(profile)
   return(
    <div>
@@ -29,13 +33,13 @@ function Repos () {
     <div className='input-container'>
       <i class="bi bi-zoom-in"></i>
       <input 
-        // value={  }
-        // onChange={  }
+        value={ nameRepo }
+        onChange={ ({ target }) => setNameRepo(target.value)  }
         className='search-users' 
         placeholder='Filter by name' 
         type="text"/>
       </div>
-      { repos.map((repo) => (
+      { repos.filter((repo) => repo.name.includes(nameRepo) ).map((repo) => (
         <div className='repos-text' key={ repo.id }>
           <span>{ repo.name }</span>
           <span>{ repo.description }</span>
