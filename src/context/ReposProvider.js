@@ -5,7 +5,7 @@ import MyContext from './MyContext';
 
 function ReposProvider({ children }) {
 
-  const [perfil, setPerfil] = useState([]);
+  const [profile, setProfile] = useState({});
   const [repos, setRepos ] = useState([]);
   
   // useEffect(async () => {
@@ -18,8 +18,8 @@ function ReposProvider({ children }) {
   const contextValue = {
     repos,
     setRepos,
-    perfil,
-    setPerfil,
+    profile,
+    setProfile,
   }
 
   return(
