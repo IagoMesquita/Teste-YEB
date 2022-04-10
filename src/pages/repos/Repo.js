@@ -1,30 +1,32 @@
 import { useContext, useState } from 'react';
 import MyContext from '../../context/MyContext';
-import forkImage from './images/gitfork_120084.png'
+import forkImage from './images/gitfork_120084.png';
+import Header from '../../components/Header/Header';
+import Profile from '../../components/Profile/Profile';
 
 import './Repo.css';
 function Repos () {
 
-  const { profile, repos } = useContext(MyContext)
+  const { repos } = useContext(MyContext)
   const [ nameRepo, setNameRepo ] = useState('');
 
-  
-
-  console.log(profile)
   return (
     <div>
-      <header>
+      <Header/>
+
+      {/* <header>
         <img src="./images/icons8-github-30.png" alt="logo-github" />
         <h3>Github</h3>
         <p>profiles</p>
-      </header>
-      <section className="profile-container">
+      </header> */}
+      <Profile/>
+      {/* <section className="profile-container">
         <img width={ 61 } src={ profile.avatar_url } alt="incone-profile" />
         <div>
           <span>{ profile.name }</span>
           <div>{ profile.bio }</div>
         </div>
-      </section>
+      </section> */}
       <div className="button-container">
         <button className="button-filter">
           <span>Repos</span>
@@ -53,7 +55,7 @@ function Repos () {
         {repos
           .filter((repo) => repo.name.includes(nameRepo))
           .map((repo) => (
-            <div className="repos-text" key={ repo.id }>
+            <div className="repos-content" key={ repo.id }>
               <span>{ repo.name }</span>
               <span>{ repo.description }</span>
               <div className="icon-container">
