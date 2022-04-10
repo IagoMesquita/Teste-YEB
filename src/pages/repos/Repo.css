@@ -1,7 +1,20 @@
 .profile-container {
+  margin: 15px auto 40px auto;
+  /* margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+  margin-bottom: 40px; */
   display: flex;
-  
+  column-gap: 8px;
+  width: 95vw;
+  border: 1px solid rebeccapurple;
+}
 
+.profile-container img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  align-self: center;
 }
 
 .profile-container span {
@@ -10,17 +23,27 @@
   font-weight: bold;
 }
 
-.repos-container {
+/* .repos-container {
   display: flex;
   flex-direction: column;
   gap: 10px ;
   border: solid 1px red;
-}
+} */
 
-.repos-text {
+.repos-content{
+  width: 80vw;
+  margin: 15px auto 10px auto;
+  padding-bottom: 20px;
+  border-bottom:0.5px  solid gray;
+  /* margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 15px; */
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   gap: 5px;
+
+
 }
 
 .icon-container {
@@ -36,7 +59,9 @@
 
 .button-container {
   display: flex;
-  justify-content: center;
+  justify-content:space-around;
+  border-bottom: solid 1px rgb(226, 225, 225);
+  padding-bottom: 10px;
 }
 
 .button-filter {  
