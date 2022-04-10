@@ -34,3 +34,30 @@
   column-gap: 10px;
 }
 
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.button-filter {  
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border: none;
+  display: flex;
+  column-gap: 10px;
+}
+
+.button-count {
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  width: 20px;
+  height: 15px;
+  font-weight:600;
+  font-size: 15px;
+  color: rgb(63, 62, 62);
+  background-color: rgb(146, 144, 144);
+  border-radius: 40%;
+
+}
