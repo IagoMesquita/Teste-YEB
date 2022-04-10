@@ -6,15 +6,6 @@ body {
   /* font-size: 0.5rem; */
 }
 
-header {
-  height: 8vh;
-  background-color: rgb(55, 53, 53);
-  font-weight: 400;
-  color: white;
-  display: flex;
-  align-items: center;
-}
-
 
 /* .container {
   height: 100vh;
@@ -52,10 +43,6 @@ header {
   text-align: center;
   
 }
-/* 
-.search-users:active {
-  border: none
-} */
 
 /* REFERENCIA: https://pt.stackoverflow.com/questions/5216/como-remover-borda-dos-input-e-textarea-de-todos-os-browsers-quando-clicado */
 textarea:focus, input:focus, select:focus {
