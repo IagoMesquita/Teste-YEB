@@ -43,7 +43,7 @@ function Repos () {
       </div>
       <main className="repos-container">
         <div className="input-container">
-          <i class="bi bi-zoom-in"></i>
+          <i class="bi bi-search"></i>
           <input
             value={ nameRepo }
             onChange={({ target }) => setNameRepo(target.value)}
