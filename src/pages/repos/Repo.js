@@ -1,19 +1,21 @@
-import { useContext, useState } from 'react';
+import { useContext } from 'react';
 import MyContext from '../../context/MyContext';
 import forkImage from './images/gitfork_120084.png';
 import Header from '../../components/Header/Header';
 import Profile from '../../components/Profile/Profile';
+import Starreds from '../../components/Starred/Starred';
 
 import './Repo.css';
 function Repos () {
 
-  const { repos } = useContext(MyContext)
-  const [ nameRepo, setNameRepo ] = useState('');
+  const { repos, nameRepo, setNameRepo, 
+          repoAllOrStar, setRepoAllOrStar
+        } = useContext(MyContext)
+  
 
   return (
     <div>
       <Header/>
-
       {/* <header>
         <img src="./images/icons8-github-30.png" alt="logo-github" />
         <h3>Github</h3>
@@ -28,11 +30,11 @@ function Repos () {
         </div>
       </section> */}
       <div className="button-container">
-        <button className="button-filter">
+        <button className="button-filter" onClick={ () => setRepoAllOrStar(true) }>
           <span>Repos</span>
           <span className='button-count'>{ repos.length }</span>
         </button>
-        <button className="button-filter">
+        <button className="button-filter" onClick={ () => setRepoAllOrStar(false) }>
           <span>Starred</span>
           <span className='button-count'>{
           repos.filter((repo) => 
@@ -52,24 +54,29 @@ function Repos () {
             type="text"
           />
         </div>
-        {repos
-          .filter((repo) => repo.name.includes(nameRepo))
-          .map((repo) => (
-            <div className="repos-content" key={ repo.id }>
-              <span>{ repo.name }</span>
-              <span>{ repo.description }</span>
-              <div className="icon-container">
-                <div className="icons">
-                  <strong>{ "< >" }</strong>
-                  <span>{ repo.language }</span>
-                </div>
-                <div className="icons">
-                  <img src={ forkImage } alt="icon-fork" />
-                  <span>{ repo.forks_count }</span>
+        { repoAllOrStar ? (
+          repos
+            .filter((repo) => repo.name.includes(nameRepo))
+            .map((repo) => (
+              <div className="repos-content" key={ repo.id }>
+                <span>{ repo.name }</span>
+                <span>{ repo.description }</span>
+                <div className="icon-container">
+                  <div className="icons">
+                    <strong>{ "< >" }</strong>
+                    <span>{ repo.language }</span>
+                  </div>
+                  <div className="icons">
+                    <img src={ forkImage } alt="icon-fork" />
+                    <span>{ repo.forks_count }</span>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))
+        )
+        : ( <Starreds/>) 
+        }
+        
       </main>
     </div>
   );
