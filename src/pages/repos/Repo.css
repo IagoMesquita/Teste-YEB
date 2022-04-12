@@ -1,9 +1,5 @@
-.profile-container {
+/* .profile-container {
   margin: 15px auto 40px auto;
-  /* margin-left: auto;
-  margin-right: auto;
-  margin-top: 15px;
-  margin-bottom: 40px; */
   display: flex;
   column-gap: 8px;
   width: 95vw;
@@ -21,35 +17,7 @@
   font-size: 20px;
   line-height: 1.25;
   font-weight: bold;
-}
-
-
-.repos-content{
-  width: 80vw;
-  margin: 15px auto 10px auto;
-  padding-bottom: 20px;
-  border-bottom:0.5px  solid gray;
-  /* margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 15px; */
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 5px;
-
-
-}
-
-.icon-container {
-  display: flex;
-  row-gap: 5px;
-  column-gap: 18px;
-}
-
-.icons {
-  display: flex;
-  column-gap: 10px;
-}
+} */
 
 .button-container {
   display: flex;
@@ -79,4 +47,9 @@
   background-color: rgb(146, 144, 144);
   border-radius: 40%;
 
+}
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

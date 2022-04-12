@@ -1,0 +1,21 @@
+.profile-container {
+  margin: 15px auto 40px auto;
+  display: flex;
+  column-gap: 10px;
+  width: 95vw;
+  color: gray;
+}
+
+.profile-container img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  align-self: center;
+}
+
+.profile-container span {
+  font-size: 20px;
+  line-height: 1.25;
+  font-weight: bold;
+  color: rgb(115, 113, 113);
+}

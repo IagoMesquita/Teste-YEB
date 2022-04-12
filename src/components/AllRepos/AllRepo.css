@@ -1,4 +1,4 @@
-.repos-star-content{
+.repos-content{
   width: 80vw;
   margin: 15px auto 10px auto;
   padding-bottom: 20px;
@@ -9,19 +9,18 @@
   gap: 10px;
 }
 
-/* Também serve para AllRepos  */
+/* 
 .name-repo {
   font-size: 700;
   color: #539bf5;
-  margin: 0;
-}
-/* Também serve para AllRepos  */
-.descript-repo {
+} */
+
+/* .descript-repo {
   color: #949ea8;
   font-size: medium;
   margin-bottom: 2px;
  
-}
+} */
 
 .icon-container {
   display: flex;

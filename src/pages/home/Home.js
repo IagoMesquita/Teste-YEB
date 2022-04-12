@@ -10,7 +10,9 @@ function Home() {
   const history = useHistory();
 
   const [ user, setUser ] = useState('');
-  const { setProfile, setRepos } = useContext(MyContext)
+
+  const { setProfile, setRepos } = useContext(MyContext);
+
   const handleInputChange = ({ target }) => {
     const { value } = target;
     setUser(value);

@@ -1,5 +1,6 @@
 import { useContext } from 'react';
 import MyContext from '../../context/MyContext';
+import './Profile.css';
 
 function Profile() {
   const { profile } = useContext(MyContext);

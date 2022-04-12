@@ -13,11 +13,16 @@ function ReposProvider({ children }) {
   const [nameRepo, setNameRepo] = useState("");
   const [repoAllOrStar, setRepoAllOrStar] = useState(true);
 
+  const [loading, setLoading] = useState(true);
+
+  const verifyRequest = () => {
+    if(repos.length) setLoading(false);
+  }
 
   useEffect(() => {
     
     setStarreds(filterStarreds(repos));
-
+    verifyRequest();
   }, [repos])
 
   console.log('REPOS:', repos);
@@ -34,6 +39,8 @@ function ReposProvider({ children }) {
     setNameRepo,
     repoAllOrStar, 
     setRepoAllOrStar,
+    loading, 
+    setLoading,
   }
 
   return(
