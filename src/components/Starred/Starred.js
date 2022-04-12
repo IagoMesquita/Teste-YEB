@@ -7,7 +7,6 @@ function Starreds() {
   const { starreds, nameRepo} = useContext(MyContext);
 
   return(
-    // <h1>FAVATIROS!!</h1>
     <>
       {starreds
         .filter((starred) => starred.name.includes(nameRepo))
