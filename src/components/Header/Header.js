@@ -6,6 +6,7 @@ function Header() {
   const { pathname } = history.location;
 
   const returningForHome = () => {
+    localStorage.clear();
     history.push('/')
   }
 

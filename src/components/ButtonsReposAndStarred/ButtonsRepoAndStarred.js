@@ -1,5 +1,5 @@
 import { useContext, useState } from 'react';
-import MyContext from '../../../context/MyContext';
+import MyContext from '../../context/MyContext';
 import './ButtonsRepoAndStarred.css';
 function ButtonsRepoAndStarred() {
   const { repos, setRepoAllOrStar } = useContext(MyContext);

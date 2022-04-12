@@ -13,17 +13,18 @@ function ReposProvider({ children }) {
   const [nameRepo, setNameRepo] = useState("");
   const [repoAllOrStar, setRepoAllOrStar] = useState(true);
 
-  const [loading, setLoading] = useState(true);
-
-  const verifyRequest = () => {
-    if(repos.length) setLoading(false);
-  }
+  useEffect(() => {
+    console.log('Chamou AAAA!!!!')
+    setStarreds(filterStarreds(repos));
+    
+  }, [repos])
 
   useEffect(() => {
-    
-    setStarreds(filterStarreds(repos));
-    verifyRequest();
-  }, [repos])
+    console.log('Chamou BBB!!!!')
+
+    setProfile(JSON.parse(localStorage.getItem('profile')) || []);
+    setRepos(JSON.parse(localStorage.getItem('repos')) || []);
+  }, [])
 
   console.log('REPOS:', repos);
   console.log('SO  FAV:', starreds)
@@ -39,8 +40,6 @@ function ReposProvider({ children }) {
     setNameRepo,
     repoAllOrStar, 
     setRepoAllOrStar,
-    loading, 
-    setLoading,
   }
 
   return(

@@ -10,6 +10,7 @@ function Home() {
   const history = useHistory();
 
   const [ user, setUser ] = useState('');
+  const [loadingHome, setLoadingHome] = useState(false);
 
   const { setProfile, setRepos } = useContext(MyContext);
 
@@ -20,25 +21,25 @@ function Home() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoadingHome(true);
     
     const infoPerfil = await getPerfil(user);
     setProfile({ ...infoPerfil });
-    
+    localStorage.setItem('profile', JSON.stringify(infoPerfil));
+
     const allRepos = await getRepos(user);
     setRepos(allRepos);
-    
+    localStorage.setItem('repos', JSON.stringify(allRepos));
+
     history.push('/repos');
 
   }
 
   return (
+    loadingHome ? (<h1 className="loading">Loading...</h1>)
+   :
    <div className='container'>
      <Header/>
-    {/* <header>
-      <img src={ logoGithub } alt="logo-github"/>
-      <h3>Github</h3>
-      <p>profiles</p>
-    </header> */}
     <main className='main-content'>
       <form onSubmit={ (e) => { handleSubmit(e) } }>
         <div className='input-container'>
@@ -50,9 +51,6 @@ function Home() {
           placeholder='Insert a username' 
           type="text"/>
         </div>
-        {/* <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon">
-          <path fill-rule="evenodd" d="M11.5 7a4.499 4.499 0 11-8.998 0A4.499 4.499 0 0111.5 7zm-.82 4.74a6 6 0 111.06-1.06l3.04 3.04a.75.75 0 11-1.06 1.06l-3.04-3.04z"></path>
-        </svg> */}
       </form>
     </main>
    </div> 

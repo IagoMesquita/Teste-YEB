@@ -18,6 +18,9 @@
   padding-bottom: 15px;
 
 }
+.button-filter:hover {
+  cursor: pointer;
+}
 
 .button-count {
   display: flex;
@@ -45,6 +48,7 @@
   width: 50vw;
   padding-bottom: 15px;
   border-bottom: 4px solid orange;
+  cursor: pointer;
 }
 
 

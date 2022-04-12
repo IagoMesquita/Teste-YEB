@@ -4,7 +4,7 @@ import Header from '../../components/Header/Header';
 import Profile from '../../components/Profile/Profile';
 import Starreds from '../../components/Starred/Starred';
 import AllRepos from '../../components/AllRepos/AllRepo';
-import ButtonsRepoAndStarred from './ButtonsReposAndStarred/ButtonsRepoAndStarred';
+import ButtonsRepoAndStarred from '../../components/ButtonsReposAndStarred/ButtonsRepoAndStarred'
 
 import './Repo.css';
 function Repos () {

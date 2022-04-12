@@ -4,6 +4,8 @@ function filterStarreds(repos) {
   ));
   console.log('filtro', starred);
   
+  localStorage.setItem('starred', JSON.stringify(starred))
+
   return starred;   
 }
 
